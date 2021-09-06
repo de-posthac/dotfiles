@@ -13,7 +13,7 @@ If you want to support [KDC LAB](https://github.com/kdc-lab/) with money, you ca
 Dotfiles can be copied by cloning of master branch:
 
 ```zsh
-cd ~ && git clone https://github.com/de-posthac/dotfiles.git .dotfiles
+cd ~ && git clone --branch master https://github.com/de-posthac/dotfiles.git .dotfiles
 rm ~/.zsrc && cp .dotfiles/.zshrc ~/.zsrc
 rm ~/.gitignore && cp .dotfiles/.gitignore ~/.gitignore
 rm ~/.gitconfig && cp .dotfiles/.gitconfig ~/.gitconfig
