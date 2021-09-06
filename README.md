@@ -14,7 +14,7 @@ Dotfiles can be copied by cloning of master branch:
 
 ```zsh
 cd ~ && git clone --branch master https://github.com/de-posthac/dotfiles.git .dotfiles
-rm ~/.zshrc && cp .dotfiles/.zshrc ~/.zhsrc
+rm ~/.zshrc && cp .dotfiles/.zshrc ~/.zshrc
 rm ~/.gitignore && cp .dotfiles/.gitignore ~/.gitignore
 rm ~/.gitconfig && cp .dotfiles/.gitconfig ~/.gitconfig
 ```
