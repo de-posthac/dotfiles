@@ -78,3 +78,5 @@ yarn-debug.log*
 yarn-error.log*
 
 !dotfiles.sh
+identities/*
+!identities/.gitkeep
