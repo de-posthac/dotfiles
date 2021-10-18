@@ -1,3 +1,9 @@
+#[include]
+#    path = ~/.dotfiles/identities/default.gitconfig
+
+#[includeIf "gitdir:~/<devPathWithDifferentIdentiy>"]
+#    path = ~/.dotfiles/identities/<idenityConfig>.gitconfig
+
 [core]
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
     
@@ -33,5 +39,5 @@
 [alias]
     remove-file = "!f() { git filter-branch -f --index-filter \"git rm --cached --ignore-unmatch $1\" --prune-empty --tag-name-filter cat -- --all; }; f"
 
-[gpg]
-	program = /usr/local/bin/gpg
+[gpg] 
+    program = /usr/local/bin/gpg
