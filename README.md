@@ -23,6 +23,35 @@ rm ~/.gitconfig && cp .dotfiles/.gitconfig ~/.gitconfig
 
 If you want to use private Certifcates Authorities (CA) for NodeJS and NPM, you can place your ca chain file under the path `~/.dotfiles/certs` with file name `ca-certificates.crt`. This will be taken into account by NodeJS.
 
+## Working with different Git identities
+
+If you work with different identities in Git, it is supported by the dotfiles. You can maintain multiple Git configurations with identities in our `~/.dotfiles/identities` directory.
+
+1. Create a file with your default identity. This will be the default idenity for all not specified development pathes. Create a file `~/.dotfiles/identities/default.gitconfig`:
+
+```git
+[user]
+    name = <your name>
+    email = <email>
+    signingkey = <gpgkey>
+```
+
+2.) Create a different file for a additional identity with a new config file, ex. `~/.dotfiles/identities/work.gitconfig` with same structure of 1.
+
+3.) Add in your global git config the follow lines:
+
+```git
+[include]
+    path = ~/.dotfiles/identities/default.gitconfig
+
+[includeIf "gitdir:/<your root development path for different identity>"]
+    path = ~/.dotfiles/identities/<idenityConfig>.gitconfig
+```
+
+The includeIf part can be used as often as you need it. On Windows you have to use `gitdir/i:` instead of `gitdir:`. This disable case sensitivity for your paths, but i never tried.
+
+In addition, you can of course store all other configurations for the Git in the [conditional configuration](https://git-scm.com/docs/git-config#_includes) per path.
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) License
