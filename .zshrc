@@ -6,6 +6,8 @@ export NODE="node@14"
 for config_file ($ZSH/lib/*.zsh) source $config_file
 fpath=($ZSH/lib/completions $fpath)
 
+alias code='/Applications/Visual\ Studio\ Code.app/contents/Resources/app/bin/code ./'
+
 # Homebrew package zsh-completions
 # brew install zsh-completions
 if type brew &>/dev/null; then
