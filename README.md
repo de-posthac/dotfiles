@@ -26,7 +26,6 @@ rm ~/.gitconfig && cp ~/.dotfiles/.gitconfig ~/.gitconfig
 ```zsh
 apt update -y && apt install zsh zplug -y
 cd ~ && git clone --branch master https://github.com/de-posthac/dotfiles.git .dotfiles
-rm ~/.zshrc && cp ~/.dotfiles/.zshrc.macos ~/.zshrc
 rm ~/.zshrc && cp ~/.dotfiles/.zshrc.debian ~/.zshrc
 rm ~/.gitignore && cp ~/.dotfiles/.gitignore ~/.gitignore
 rm ~/.gitconfig && cp ~/.dotfiles/.gitconfig ~/.gitconfig
