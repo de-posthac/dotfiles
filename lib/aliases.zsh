@@ -8,3 +8,5 @@ alias path='echo -e ${PATH//:/\\n}'
 alias uuid='uuidgen'
 alias grep="fgrep --color=auto "
 alias fgrep="fgrep --color=auto "
+alias cdsts-init="cds-ts --add xsuaa,mtx,approuter,kibana-logging,mta,hana init "
+alias cds-init="cds --add xsuaa,mtx,approuter,kibana-logging,mta,hana init "
