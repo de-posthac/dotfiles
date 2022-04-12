@@ -1,4 +1,4 @@
-# ZSH dotfiles for MacOS and personal flavor
+# ZSH dotfiles for MacOS or Debian and personal flavor
 
 The following repository contains a basic configuration for the Z-Shell (ZSH) for a macOS system and with my personal flavor. It does not want to compete with the feature set of an [ohmyz.sh](https://ohmyz.sh/). Rather I want to thank the project, because I borrowed some stuff.
 
@@ -10,13 +10,26 @@ If you want to support [KDC LAB](https://github.com/kdc-lab/) with money, you ca
 
 ## Manual install
 
-Dotfiles can be copied by cloning of master branch:
+Dotfiles can be used by cloning of master branch or develop branch. The development branch is not always fully tested and without any warranty.
+
+**MACOS**
 
 ```zsh
 cd ~ && git clone --branch master https://github.com/de-posthac/dotfiles.git .dotfiles
-rm ~/.zshrc && cp ~/.dotfiles/.zshrc ~/.zshrc
+rm ~/.zshrc && cp ~/.dotfiles/.zshrc.macos ~/.zshrc
 rm ~/.gitignore && cp ~/.dotfiles/.gitignore ~/.gitignore
 rm ~/.gitconfig && cp ~/.dotfiles/.gitconfig ~/.gitconfig
+```
+
+**Debian**
+
+```zsh
+apt update -y && apt install zsh zplug -y
+cd ~ && git clone --branch master https://github.com/de-posthac/dotfiles.git .dotfiles
+rm ~/.zshrc && cp ~/.dotfiles/.zshrc.debian ~/.zshrc
+rm ~/.gitignore && cp ~/.dotfiles/.gitignore ~/.gitignore
+rm ~/.gitconfig && cp ~/.dotfiles/.gitconfig ~/.gitconfig
+chsh -s /bin/zsh && zsh
 ```
 
 ## Certifcates Authorities for node and npm

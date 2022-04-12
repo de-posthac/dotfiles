@@ -17,6 +17,10 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
+
+if ! zplug check; then
+    zplug install
+fi
 zplug load
 
 export NODE_EXTRA_CA_CERTS="$ZSH/certs/ca-certificates.crt"
