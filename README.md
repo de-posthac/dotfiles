@@ -16,9 +16,9 @@ Dotfiles can be used by cloning of master branch or develop branch. The developm
 
 ```zsh
 cd ~ && git clone --branch master https://github.com/de-posthac/dotfiles.git .dotfiles
-rm ~/.zshrc && cp ~/.dotfiles/.zshrc.macos ~/.zshrc
-rm ~/.gitignore && cp ~/.dotfiles/.gitignore ~/.gitignore
-rm ~/.gitconfig && cp ~/.dotfiles/.gitconfig ~/.gitconfig
+cp ~/.dotfiles/.zshrc.macos ~/.zshrc
+cp ~/.dotfiles/.gitignore ~/.gitignore
+cp ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
 
 **Debian**
@@ -26,9 +26,9 @@ rm ~/.gitconfig && cp ~/.dotfiles/.gitconfig ~/.gitconfig
 ```zsh
 apt update -y && apt install zsh zplug -y
 cd ~ && git clone --branch master https://github.com/de-posthac/dotfiles.git .dotfiles
-rm ~/.zshrc && cp ~/.dotfiles/.zshrc.debian ~/.zshrc
-rm ~/.gitignore && cp ~/.dotfiles/.gitignore ~/.gitignore
-rm ~/.gitconfig && cp ~/.dotfiles/.gitconfig ~/.gitconfig
+cp ~/.dotfiles/.zshrc.debian ~/.zshrc
+cp ~/.dotfiles/.gitignore ~/.gitignore
+cp ~/.dotfiles/.gitconfig ~/.gitconfig
 chsh -s /bin/zsh && zsh
 ```
 
