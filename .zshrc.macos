@@ -1,7 +1,7 @@
 export ZSH=$HOME/.dotfiles
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export NODE="node@14"
+export NODE_EXTRA_CA_CERTS="$ZSH/certs/ca-certificates.crt"
 
 for config_file ($ZSH/lib/*.zsh) source $config_file
 fpath=($ZSH/lib/completions $fpath)
@@ -15,11 +15,10 @@ if type brew &>/dev/null; then
 fi
 
 # Load and run compinit
-autoload -U compinit
-compinit -i
+autoload -Uz compinit && compinit
 
-export LDFLAGS="-L/usr/local/opt/$NODE/lib"
-export CPPFLAGS="-I/usr/local/opt/$NODE/include"
-export PATH="/usr/local/opt/$NODE/bin:/usr/local/sbin:$PATH"
-
-export NODE_EXTRA_CA_CERTS="$ZSH/certs/ca-certificates.crt"
+#SAP CAP compleation
+CDS_PROFILE=$(cds completion --shell zsh --profile 2> /dev/null) || CDS_PROFILE=""
+if [ -r "$CDS_PROFILE" ]; then
+    . "$CDS_PROFILE"
+fi
