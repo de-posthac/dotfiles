@@ -8,8 +8,8 @@
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [init]
-    defaultBranch = develop   
-    
+    defaultBranch = develop
+
 [http]
     postBuffer = 157286400
 
@@ -42,5 +42,8 @@
 [alias]
     remove-file = "!f() { git filter-branch -f --index-filter \"git rm --cached --ignore-unmatch $1\" --prune-empty --tag-name-filter cat -- --all; }; f"
 
-[gpg] 
+[gpg]
     program = /usr/local/bin/gpg
+
+[gpg "ssh"]
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign

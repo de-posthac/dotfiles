@@ -1,0 +1,10 @@
+[user]
+  name = Firstname Lastname
+  email = mail@example.com
+  signingkey = ssh-ed25519 AAAAC3NzaC...rest_of_your_ssh_public_key...
+
+[commit]
+  gpgsign = true
+
+[gpg]
+  format = ssh
